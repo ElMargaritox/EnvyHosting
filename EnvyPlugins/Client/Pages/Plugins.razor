@@ -1,0 +1,36 @@
+﻿
+@page "/plugins"
+@using EnvyPlugins.Shared
+@inject HttpClient Http
+
+@if (plugins == null)
+{
+    <p><em>Cargando Lista De Plugins...</em></p>
+}
+else
+{
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 justify-content-center">
+            @foreach (var plugin in plugins)
+            {
+                   <div class="col bg-light rounded border-2 border" style="width: 350px; height: 150px; margin: 10px 10px 10px 10px;">
+                       <div class="d-flex align-items-center text-center" style="margin-top: -20px;">
+                           <div><a href="@plugin.Name"><img src="@plugin.ImageUrl" width="85" height="85" class="rounded border border-2"></a></div>
+                        <div class="ms-1 text-center w-100" style="margin-bottom: -20px;">
+                           <div><a class="ms-2 text-center w-100 text-decoration-none" href="@plugin.Name"><h3>@plugin.Name</h3></a></div>
+                       </div>
+                       </div>
+                       
+                   </div>
+            }
+        </div>      
+    </div>
+
+}
+
+@code {
+    private Plugin[]? plugins;
+
+
+    protected override async Task OnInitializedAsync() => plugins = await Http.GetFromJsonAsync<Plugin[]>("Data/PluginsData.json");
+}

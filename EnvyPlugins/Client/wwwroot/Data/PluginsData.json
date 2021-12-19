@@ -1,0 +1,24 @@
+﻿[
+  {
+    "Name": "EnvyEssentials",
+    "Description": "Similar a uEssentials pero optimizado!",
+    "Version": "1.0.0.2",
+    "ImageUrl": "https://i.imgur.com/y777jVZ.gif",
+    "Cost": 100
+  },
+  {
+    "Name": "EnvyPowers",
+    "Description": "Poderes en las ropas (Velocidad - Salto)!",
+    "Version": "1.0.0.0",
+    "ImageUrl": "https://i.imgur.com/y777jVZ.gif",
+    "Cost": 0
+  },
+  {
+    "Name": "EnvyStats",
+    "Description": "Estadisticas en tu servidor!!",
+    "Version": "1.0.0.0",
+    "ImageUrl": "https://i.imgur.com/y777jVZ.gif",
+    "Cost": 0
+  },
+
+]
